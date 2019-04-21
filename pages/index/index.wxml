@@ -1,0 +1,13 @@
+<view class='slider'>
+    <swiper indicator-dots='1' autoplay='1' interval='2500' duration='1000' circular>
+        <swiper-item wx:for="{{sliderList}}" wx:key="id">
+            <image src='{{item.image}}' width="375" height="150" mode='aspectFill'></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class='index-nav'>
+    <navigator class='nav-item' url='/pages/shopList/shopList?cat={{item.id}}&title={{item.name}}' wx:for="{{categoriesList}}" wx:key="id">
+        <image src='{{item.icon}}'></image>
+        <text>{{item.name}}</text>
+    </navigator>
+</view>
